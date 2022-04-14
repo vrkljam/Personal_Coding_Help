@@ -12,3 +12,8 @@ const port = process.env.PORT || 5555
 
 app.listen((port), ()=>{
     console.log(`App on port: ${port}`)})
+
+
+    //  "url": "www.blah.com",
+//  "dateAdded": Date,
+//  "img":"",

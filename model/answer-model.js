@@ -1,17 +1,20 @@
-const mongoose =require('mongoose');
+const mongoose =require('../db/connnection');
 
-const HowtoSchema = new mongoose.Schema({
-
-    title: {type:String, 
-            required:true},
-    url:String,
-    dateAdded: Date,
-    description:String,
-    img:String,
+const HowtoSchema = new mongoose.Schema(
+    {
+        title: {type:String, required:true},
+        description:String
     },
-
-    {timestamps:true}
-)
-
-const How = mongoose.model('How', HowtoSchema);
-module.exports=How;
+        
+        {timestamps:true}
+    )
+        
+const Howto = mongoose.model('Howto', HowtoSchema);
+module.exports=Howto;
+        
+        
+        
+        
+//         url:String,
+//         dateAdded: Date,
+// img:{type:String,default:null}
