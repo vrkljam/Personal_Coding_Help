@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
+const howtoController= require('./controller/howto-controller')
+
+app.set('view engine', 'hbs')
+app.use(express.json())
+app.use(howtoController)
 
 
-
-
-app.get('/', (req,res)=>{
-    res.send('the wind is back')
-})
 
 const port = process.env.PORT || 5555
 

@@ -2,7 +2,9 @@ const mongoose =require('../db/connnection');
 
 const HowtoSchema = new mongoose.Schema(
     {
-        title: {type:String, required:true},
+        title: {type:String, 
+            required:true},
+            
         description:String
     },
         
