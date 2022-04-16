@@ -23,6 +23,21 @@ router.get('/:id', (req,res)=>{
     .catch(console.error)
 })
 
+//update
+router.put('/', (req,res)=>{
+    Howto.findByIdAndUpdate ({})
+    .then
+    .catch
+})
+
+
+//delete
+router.delete('/', (req,res)=>{
+    Howto.findByIdAndDelete({})
+    .then
+    .cathch
+})
+
 
 
 

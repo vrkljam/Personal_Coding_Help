@@ -1,6 +1,18 @@
 const mongoose = require('mongoose');
 
-const connectionString ="mongodb+srv://mikev:mikev@cluster0.ap9gd.mongodb.net/howto?retryWrites=true&w=majority";
-mongoose.connect(connectionString);
+
+const mongoURI = 
+process.env.NODE_ENV === 'production'
+? process.env.DB_URL
+:process.env.DEV_DB_URL
+"mongodb+srv://mikev:mikev@cluster0.ap9gd.mongodb.net/howto?retryWrites=true&w=majority";
+
+
+mongoose.connect(mongoURI)
+    .then(instance => console.log(`connected to : ${instance.connections[0].name}`))
+    .catch(error => console.log(`failed conn:`, error))
 
 module.exports = mongoose
+
+
+
