@@ -5,7 +5,7 @@ const mongoURI =
 process.env.NODE_ENV === 'production'
 ? process.env.DB_URL
 :process.env.DEV_DB_URL
-"mongodb+srv://mikev:mikev@cluster0.ap9gd.mongodb.net/howto?retryWrites=true&w=majority";
+
 
 
 mongoose.connect(mongoURI)

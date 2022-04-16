@@ -17,11 +17,11 @@ router.post('/', (req,res)=>{
 })
 
 //read one route
-router.get('/:id', (req,res)=>{
-    Howto.findById(req.params.id)
-    .then(b=>res.send(b))
-    .catch(console.error)
-})
+// router.get('/:id', (req,res)=>{
+//     Howto.findById(req.params.id)
+//     .then(b=>res.send(b))
+//     .catch(console.error)
+// })
 
 //update
 router.put('/', (req,res)=>{
