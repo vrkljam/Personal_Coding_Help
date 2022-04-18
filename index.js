@@ -1,21 +1,23 @@
 require('dotenv').config()
 const express = require('express');
 const app = express();
-const howtoController= require('./controller/howto-controller')
+const howtoController= require('./controller/howtocontroller');
+const Howto = require('./model/answer-model');
 
 app.set('view engine', 'hbs')
 app.use(express.json())
 app.use(howtoController)
 
-let testcode ="router.put('/', (req,res)=>{"
-let testCode2 ="router.put('/', (req,res)=>{"
+// let testcode ="router.put('/', (req,res)=>{"
+// let testCode2 ="router.put('/', (req,res)=>{"
 
-app.get('/:name', (req,res)=>{  
+// app.get('/:name', (req,res)=>{  
 
-    res.render('page2',{kristi:req.params.name,
-    testCode: testcode,
-    testcode2: testCode2})
-})
+//     res.render('page2',{kristi:req.params.name,
+//     testCode: testcode,
+//     testcode2: testCode2})
+// })
+
 
 
 const port = process.env.PORT || 5555

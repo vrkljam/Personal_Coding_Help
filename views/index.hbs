@@ -1,5 +1,11 @@
-<li>{{blah}}</li>
-<li>{{anotherName}}</li>
-<li>{{randomText}}
-    
+
+<h1>categories</h1>
+<ul class="list-group"> 
+{{#each b}}
+<li class="list-group-item d-flex justify-content-between">
+    <div>{{this.description}}</div>
 </li>
+{{/each}}
+
+</ul>
+<a href="/{{this.id}}" class="btn btn-info">view</a>
