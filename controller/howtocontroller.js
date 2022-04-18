@@ -10,7 +10,11 @@ router.get('/', (req,res)=>{
     .catch(console.error)
 })
 
-
+router.get('/:id', (req,res)=>{
+    Howto.findById(req.params.id)
+    .then((c)=>{res.render('show', c)})
+    .catch(console.error)
+})
 //create a new one
 // router.post('/', (req,res)=>{
 //     Howto.create(req.body)

@@ -3,7 +3,9 @@
 <ul class="list-group"> 
 {{#each b}}
 <li class="list-group-item d-flex justify-content-between">
-    <div>{{this.description}}</div>
+    <div>{{this.title}}
+        <a href="/{{this.id}}" class="btn btn-info">view</a>
+    </div>
 </li>
 {{/each}}
 
