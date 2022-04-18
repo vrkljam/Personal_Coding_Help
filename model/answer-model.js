@@ -4,8 +4,11 @@ const HowtoSchema = new mongoose.Schema(
     {
         title: {type:String, 
             required:true},
-            
-        description:String
+        description:String,
+        url:String,
+        dateAdded:Date,
+        img:String
+
     },
         
         {timestamps:true}

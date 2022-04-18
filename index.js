@@ -1,4 +1,4 @@
-require('dotenv').config()
+
 const express = require('express');
 const app = express();
 const howtoController= require('./controller/howtocontroller');
@@ -17,6 +17,7 @@ app.use(howtoController)
 //     testCode: testcode,
 //     testcode2: testCode2})
 // })
+
 
 
 

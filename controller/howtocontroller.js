@@ -6,15 +6,14 @@ const Howto = require('../model/answer-model');
 router.get('/', (req,res)=>{
     Howto.find({})
     .then((b)=>res.render('index',{b}))
-    // .then((a)=> {res.json(a)})
     .catch(console.error)
 })
 
-router.get('/:id', (req,res)=>{
-    Howto.findById(req.params.id)
-    .then((c)=>{res.render('show', c)})
-    .catch(console.error)
-})
+// router.get('/:id', (req,res)=>{
+//     Howto.findById(req.params.id)
+//     .then((c)=>{res.render('show', c)})
+//     .catch(console.error)
+// })
 //create a new one
 // router.post('/', (req,res)=>{
 //     Howto.create(req.body)

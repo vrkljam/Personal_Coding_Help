@@ -1,13 +1,28 @@
 
 <h1>categories</h1>
 <ul class="list-group"> 
-{{#each b}}
+{{!-- {{#each b}}
 <li class="list-group-item d-flex justify-content-between">
-    <div>{{this.title}}
+    <div>{{this.title}}, {{this.description}},{{this.url}},{{this.dateAdded}},{{this.img}}
         <a href="/{{this.id}}" class="btn btn-info">view</a>
     </div>
 </li>
-{{/each}}
-
-</ul>
-<a href="/{{this.id}}" class="btn btn-info">view</a>
+{{/each}} --}}
+{{!-- </ul> --}}
+<table>
+    <thead>
+        <th>Title</th>
+        <th>description</th>
+        <th>url</th>
+        <th>date</th>
+    </thead>
+    <tbody>
+        {{#each b}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.description}}</td>
+            <td>{{this.url}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
