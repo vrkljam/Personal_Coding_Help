@@ -6,43 +6,36 @@ const Howto = require('../model/answer-model');
 router.get('/', (req,res)=>{
     Howto.find({})
     .then((b)=>res.render('index',{b}))
+    // .then((g)=>{res.send(g)})
     .catch(console.error)
 })
 
-// router.get('/:id', (req,res)=>{
-//     Howto.findById(req.params.id)
-//     .then((c)=>{res.render('show', c)})
-//     .catch(console.error)
-// })
+router.get('/:id', (req,res)=>{
+    Howto.findById(req.params.id)
+    .then((c)=>res.render('show',c))
+    .catch(console.error)
+})
 //create a new one
-// router.post('/', (req,res)=>{
-//     Howto.create(req.body)
-//     .then((b)=>res.json(b))
-// })
-
-//read one route
-// router.get('/:id', (req,res)=>{
-//     Howto.findById(req.params.id)
-//     .then((c)=>{res.render('show', c)})
-//     // .then(b=>res.send(b))
-//     .catch(console.error)
-// })
-
-//update
-// router.put('/', (req,res)=>{
-//     Howto.findByIdAndUpdate ({})
-//     .then
-//     .catch
-// })
+router.post('/add', (req,res)=>{
+    Howto.create(req.body)
+    .then((b)=>res.send(b))
+})
 
 
 //delete
-// router.delete('/', (req,res)=>{
-//     Howto.findByIdAndDelete({})
-//     .then (()=> res.redirect('/home'))
-//     .cathch
+// router.delete('/:id', (req,res)=>{
+//     Howto.findByIdAndDelete({_id:req.params.id})
+//     .then((h)=>{res.send(h)})
+    // .then (()=> res.redirect('/home'))
+    
 // })
 
+//update
+router.put('/:id', (req,res)=>{
+    Howto.findOneAndUpdate ({_id: req.params.id}, req.body)
+    .then((e)=>res.send(e))
+    
+})
 
 
 
