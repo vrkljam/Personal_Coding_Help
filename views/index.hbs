@@ -1,6 +1,8 @@
 
 <h1>Categories</h1>
 
+<a href="/new" class="btn btn-primary">New Entry:</a>
+
 <div>
     <table>
         <thead>
@@ -17,11 +19,14 @@
                 <td>{{this.description}}</td>
                 <td><a href="{{this.url}}">{{this.url}}</a></td>
                 <td><time class="format-date"></time>{{this.createdAt}}</td>
-                <div><a href="{{this.id}}" class='btn btn-info'>View</a></div>
-        
+
+                <div ><a href="{{this.id}}" class='btn btn-info'>View</a>
+                 <a href="/todos/{{this.id}}/edit" class="btn btn-primary">Edit</a>
+                </div>
             </tr>
             {{/each}}
         </tbody>
     
     </table>
+
 </div>

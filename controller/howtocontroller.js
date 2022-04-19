@@ -10,15 +10,19 @@ router.get('/', (req,res)=>{
     .catch(console.error)
 })
 
+//create a new one
+router.get('/new', (req,res)=>{
+    res.render('new')
+})
+router.post('/add', (req,res)=>{
+   Howto.create(req.body)
+    .then(()=>res.redirect('/'))
+})
+
 router.get('/:id', (req,res)=>{
     Howto.findById(req.params.id)
     .then((c)=>res.render('show',c))
     .catch(console.error)
-})
-//create a new one
-router.post('/add', (req,res)=>{
-    Howto.create(req.body)
-    .then((b)=>res.send(b))
 })
 
 
