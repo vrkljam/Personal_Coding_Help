@@ -44,16 +44,18 @@ router.get('/:id/edit',(req,res)=>{
 })
 
 //update
-router.put('/:id', (req,res)=>{
-    Howto.findOneAndUpdate (
-        {_id: req.params.id}, 
-        {title: req.body.title,
-        url: req.body.url,
-        description: req.body.description},
-        {new: true}
+router.put('/:id/:id', (req,res)=>{
+    Howto.findByIdAndUpdate (
+        req.params.id,
+        req.body,
+        {new:true}
             )
+            
+  
     .then((e)=>{res.render('show',e)})
     
+  
+
 })
 
 
