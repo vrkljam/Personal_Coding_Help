@@ -1,5 +1,44 @@
-<h1>Edit entry</h1>
+<h1>Edit Page</h1>
 
+
+<form action="{{this.id}}/?_method=PUT" method="PUT">
+
+  <div class="form-group">
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" class="form-control" value="{{this.title}}"/>
+
+    <label for="description">description:</label>
+    <input type="text" id="description" name="description" class="form-control" value="{{this.description}}"/>
+
+    <label for="URL">URL:</label>
+    <input type="text" id="url" name="url" class="form-control" value="{{this.url}}"/>
+  
+
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Update entry"/>
+  <a href="/" class="btn btn-secondary">Cancel</a>
+</form>
+
+
+
+  {{!-- Might use this to add categories --}}
+    {{!-- <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+    </div> --}}
+{{!-- ******* above for possible category addition --}}
+
+
+{{!-- 
+<h1>New Entry:</h1>
 <form action="{{this.id}}?_method=put" method="POST" >
 
     <div>
@@ -12,4 +51,5 @@
 <a href="/index.js" class="'btn btn-secondary">Cancel</a>
 
 
-</form>
+</form> --}}
+

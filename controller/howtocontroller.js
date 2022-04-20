@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Howto = require('../model/answer-model');
-const moment = require('moment')
+const moment = require('moment');
+const res = require('express/lib/response');
 
 //Read -all route
 router.get('/', (req,res)=>{
@@ -36,12 +37,24 @@ router.delete('/:id', (req,res)=>{
      .catch(console.error)
 })
 
+//the get for updating
+router.get('/:id/edit',(req,res)=>{
+    Howto.findById(req.params.id)
+    .then((m)=>{res.render('edit',m)})
+})
+
 //update
-// router.put('/:id', (req,res)=>{
-//     Howto.findOneAndUpdate ({_id: req.params.id}, req.body)
-//     .then((e)=>res.send(e))
+router.put('/:id', (req,res)=>{
+    Howto.findOneAndUpdate (
+        {_id: req.params.id}, 
+        {title: req.body.title,
+        url: req.body.url,
+        description: req.body.description},
+        {new: true}
+            )
+    .then((e)=>{res.render('show',e)})
     
-// })
+})
 
 
 
