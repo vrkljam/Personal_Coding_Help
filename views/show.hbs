@@ -1,14 +1,22 @@
+<h1></h1>
+
+<ul class="list-group">
+
+   
+    <li>{{this.title}}</li>
+    <li>{{this.description}}</li>
+    <li>{{this.url}}</li>
+    <li>{{this.createdAt}}</li>
 
 
-<h1>{{this.id}}</h1>
-<h1>{{this.title}}</h1>
-<h1>{{this.description}}</h1>
-<h1>{{this.url}}</h1>
-<h1>{{this.createdAt}}</h1>
-<h1>{{this.id}}</h1>
+<form action="/add" method="POST">
+{{!-- <textarea name="description" id="" cols="30" rows="10">description</textarea> --}}
+<label for="description">description:</label>
+<input type="text" id="description" name="description" class="form-control" />
+</form>
 
-<p class="list-group-item d-flex justify-content-between">{{this.description}}</p>
-<textarea name="description" id="" cols="30" rows="10">description</textarea>
-
+ 
+ </ul>
+ 
   {{!-- <input type="submit" class="btn btn-primary" /> --}}
-  <a href="/" class="btn btn-secondary">Cancel</a>
+  <a href="/" class="btn btn-secondary">Back to Index</a>
