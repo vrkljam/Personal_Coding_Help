@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const Howto = require('../model/answer-model');
+const moment = require('moment')
 
 //Read -all route
 router.get('/', (req,res)=>{
     Howto.find({})
-    .then((b)=>res.render('index',{b}))
-    // .then((g)=>{res.send(g)})
+    .then((b)=>{
+       res.render('index',{b})
+    })
     .catch(console.error)
 })
 
@@ -19,6 +21,7 @@ router.post('/add', (req,res)=>{
     .then(()=>res.redirect('/'))
 })
 
+//read one entry
 router.get('/:id', (req,res)=>{
     Howto.findById(req.params.id)
     .then((c)=>res.render('show',c))
@@ -27,19 +30,18 @@ router.get('/:id', (req,res)=>{
 
 
 //delete
-// router.delete('/:id', (req,res)=>{
-//     Howto.findByIdAndDelete({_id:req.params.id})
-//     .then((h)=>{res.send(h)})
-    // .then (()=> res.redirect('/home'))
-    
-// })
+router.delete('/:id', (req,res)=>{
+    Howto.findByIdAndRemove({_id:req.params.id})
+     .then (()=> {res.redirect('/')})
+     .catch(console.error)
+})
 
 //update
-router.put('/:id', (req,res)=>{
-    Howto.findOneAndUpdate ({_id: req.params.id}, req.body)
-    .then((e)=>res.send(e))
+// router.put('/:id', (req,res)=>{
+//     Howto.findOneAndUpdate ({_id: req.params.id}, req.body)
+//     .then((e)=>res.send(e))
     
-})
+// })
 
 
 

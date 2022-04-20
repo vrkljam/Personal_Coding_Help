@@ -7,8 +7,8 @@ const HowtoSchema = new mongoose.Schema(
         description:String,
         url:String,
         dateAdded:Date,
-        img:String
-
+        img:String,
+    
     },
         
         {timestamps:true}
