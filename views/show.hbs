@@ -1,21 +1,17 @@
-<h1></h1>
+<h1>View of: {{this.title}}</h1>
 
 <ul class="list-group">
-
    
-    <li>{{this.title}}</li>
-    <li>{{this.description}}</li>
-    <li>{{this.url}}</li>
+    <li>Description: {{this.description}}</li>
+    <li>Link: <a href="{{this.url}}">{{this.url}}</a></li>
     <li>{{this.createdAt}}</li>
-
 
 <form action="/add" method="POST">
 {{!-- <textarea name="description" id="" cols="30" rows="10">description</textarea> --}}
-<label for="description">description:</label>
+<label for="description">Edit Description:</label>
 <input type="text" id="description" name="description" class="form-control" />
 </form>
 
- 
  </ul>
  
   {{!-- <input type="submit" class="btn btn-primary" /> --}}
