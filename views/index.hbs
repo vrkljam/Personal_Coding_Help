@@ -1,41 +1,46 @@
 
-<h1>Categories</h1>
-
-<a href="/new" class="btn btn-primary">New Entry:</a>
-
-<div>
-    <table class="table table-striped table-hover table-bordered align-middle">
-        <thead>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col">URL</th>
-            <th scope="col">Date Added</th>
-        </thead>
+<body>
         
-        <tbody>
-            {{#each b}}
-            <tr>
-                <td>{{this.title}}</td>
-                <td>{{this.description}}</td>
-                <td><a href="{{this.url}}">{{this.url}}</a></td>
-                <td><time class="format-date"></time>{{this.createdAt}}</td>
-                
-                {{!-- this is date format from LUXON --}}
-                {{!-- DateTime.now().toFormat('MMMM dd, yyyy')	 --}}
-                
 
-                <td><div >
-                    <a href="{{this.id}}" class='btn btn-info'>View</a>
-                    <a href="/{{this.id}}/edit" class="btn btn-primary">Edit</a>
-                    <form action="{{this.id}}?_method=DELETE" method="POST" class="d-inline" >
-                        <input type="submit" value="Delete" class="btn btn-danger">
-                    </form>
-                </div>
-                </td>
-            </tr>
-            {{/each}}
-        </tbody>
-    
-    </table>
+    <h1>Categories</h1>
 
-</div>
+    <a href="/new" class="btn btn-primary " >New Entry:</a>
+
+    <div class="container-fluid" >
+        <table class="table table-striped table-hover table-bordered align-middle">
+            <thead>
+                <th scope="col">Category</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">URL</th>
+                <th scope="col">Date Added</th>
+            </thead>
+            
+            <tbody>
+                {{#each b}}
+                <tr>
+                    <td>{{this.category}}</td>
+                    <td>{{this.title}}</td>
+                    <td>{{this.description}}</td>
+                    <td><a href="{{this.url}}">{{this.url}}</a></td>
+                    <td><time class="format-date"></time>{{this.createdAt}}</td>
+                    
+                    {{!-- this is date format from LUXON --}}
+                    {{!-- DateTime.now().toFormat('MMMM dd, yyyy')	 --}}
+                    
+
+                    <td>
+                        <div >
+                            <a href="{{this.id}}" class='btn btn-info'>View</a>
+                            <a href="/edit/{{this.id}}" class="btn btn-primary">Edit</a>
+                            <a href="/{{this.id}}/delete" class="btn btn-danger" class="d-inline">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        
+        </table>
+
+    </div>
+</body>
