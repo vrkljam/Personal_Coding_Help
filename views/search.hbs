@@ -1,8 +1,6 @@
-<body>
-    <div class="container-fluid" >
-        <h1>Categories</h1>
-       
-        <table class="table table-striped table-hover table-bordered align-middle text-center">
+ <h1>All entries for:</h1>
+
+     <table class="table table-striped table-hover table-bordered align-middle text-center">
             <thead>
                 <th scope="col">Category</th>
                 <th scope="col">Title</th>
@@ -12,7 +10,7 @@
             </thead>
             
             <tbody>
-                {{#each b}}
+                {{#each found}}
                 <tr>
                     <td>{{this.category}}</td>
                     <td>{{this.title}}</td>
@@ -33,8 +31,3 @@
             </tbody>
         
         </table>
-        
-        <a href="/" class="btn btn-secondary">Back to Index</a>
-  
-    </div>
-</body>

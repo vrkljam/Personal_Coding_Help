@@ -58,11 +58,20 @@ router.put('/:id', (req,res)=>{
 
 })
 
-router.get('/search', (req,res)=>{
-    Howto.find({$text})
-    .then((b)=>{res.render('search',{b})
-    })
-    .catch(console.error)
+router.get('/search',(req,res)=>{
+    res.render('search')
+})
+
+router.post('/search', (req,res)=>{
+    let title = req.body
+    Howto.find({title: title})
+
+    .then((found)=>{res.render('search',{found})})
+    
+    // Howto.find({$text})
+    // .then((b)=>{res.render('search',{b})
+    // })
+    // .catch(console.error)
 })
 
 
