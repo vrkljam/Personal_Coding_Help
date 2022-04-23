@@ -15,8 +15,8 @@ const HowtoSchema = new mongoose.Schema(
         {timestamps:true}
         )
         
-        const Howto = mongoose.model('Howto', HowtoSchema);
-        module.exports=Howto;
+const Howto = mongoose.model('Howto', HowtoSchema);
+module.exports=Howto;
         
         
         // category:[CategorySchema]  

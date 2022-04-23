@@ -1,7 +1,8 @@
 body{
     background: 
     linear-gradient(320deg, rgba(0,0,255,.4), rgba(0,0,255,0) 70%),
-    linear-gradient(120deg, rgba(0,255,0,.37), rgba(0,255,0,0) 60%);
-    
+    linear-gradient(120deg, rgba(0,255,0,.37), rgba(0,255,0,0) 60%) ;
+  height: 100vh;
+   
+  
 }
-

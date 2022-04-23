@@ -24,7 +24,7 @@ router.post('/add', (req,res)=>{
 //read one entry
 router.get('/:id', (req,res)=>{
     Howto.findById(req.params.id)
-    .then((c)=>res.render('show',c))
+    .then((c)=>res.render('show', c))
     .catch(console.error)
 })
 
@@ -53,10 +53,16 @@ router.put('/:id', (req,res)=>{
         req.body,
         {new:true}
             )
-  
     .then(()=>{res.redirect('/')})
     .catch(console.error)
 
+})
+
+router.get('/search', (req,res)=>{
+    Howto.find({$text})
+    .then((b)=>{res.render('search',{b})
+    })
+    .catch(console.error)
 })
 
 
