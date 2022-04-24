@@ -34,9 +34,9 @@ router.get('/jsindex', (req,res)=>{
 })
 
 //Read -all bootstrap index route
-router.get('/bootstrapindex', (req,res)=>{
+router.get('/bootstrap', (req,res)=>{
     Howto.find({category: /bootstrap/i})
-    .then((b)=>{res.render('bootstrapindex',{b})
+    .then((b)=>{res.render('bootstrap',{b})
     })
     .catch(console.error)
 })
@@ -99,7 +99,6 @@ router.get('/edit/:id',(req,res)=>{
     Howto.findById(req.params.id)
     .then(m=>res.render('edit',m))
 })
-
 //update
 router.put('/:id', (req,res)=>{
     Howto.findByIdAndUpdate (

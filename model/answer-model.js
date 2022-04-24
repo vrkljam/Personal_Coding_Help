@@ -9,7 +9,8 @@ const HowtoSchema = new mongoose.Schema(
             url:String,
             dateAdded:Date,
             img:String,
-            category:[String]
+            category:[String],
+            codeblock:String
         },
         
         {timestamps:true}
