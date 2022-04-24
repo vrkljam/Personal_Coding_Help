@@ -4,10 +4,64 @@ const Howto = require('../model/answer-model');
 const moment = require('moment');
 const res = require('express/lib/response');
 
+//landing page route
+router.get('/',(req,res)=>{
+    res.render('landingpage')
+})
+
+//Read -all html index route
+router.get('/htmlindex', (req,res)=>{
+    Howto.find({category: /html/i})
+    .then((b)=>{res.render('htmlindex',{b})
+    })
+    .catch(console.error)
+})
+
+//Read -all css index route
+router.get('/cssindex', (req,res)=>{
+    Howto.find({category: /CSS/i})
+    .then((b)=>{res.render('cssindex',{b})
+    })
+    .catch(console.error)
+})
+
+//Read -all js index route
+router.get('/jsindex', (req,res)=>{
+    Howto.find({category: /js/i})
+    .then((b)=>{res.render('jsindex',{b})
+    })
+    .catch(console.error)
+})
+
+//Read -all bootstrap index route
+router.get('/bootstrapindex', (req,res)=>{
+    Howto.find({category: /bootstrap/i})
+    .then((b)=>{res.render('bootstrapindex',{b})
+    })
+    .catch(console.error)
+})
+
+//Read -all js mongmon route
+router.get('/mongmonindex', (req,res)=>{
+    Howto.find({category: /mong/i})
+    .then((b)=>{res.render('mongmonindex',{b})
+    })
+    .catch(console.error)
+})
+
+
+//Read -all misc index route
+router.get('/miscindex', (req,res)=>{
+    Howto.find({category: /misc/i})
+    .then((b)=>{res.render('miscindex',{b})
+    })
+    .catch(console.error)
+})
+
 //Read -all route
-router.get('/', (req,res)=>{
+router.get('/all', (req,res)=>{
     Howto.find({})
-    .then((b)=>{res.render('index',{b})
+    .then((b)=>{res.render('allindex',{b})
     })
     .catch(console.error)
 })
@@ -57,22 +111,5 @@ router.put('/:id', (req,res)=>{
     .catch(console.error)
 
 })
-
-router.get('/search',(req,res)=>{
-    res.render('search')
-})
-
-router.post('/search', (req,res)=>{
-    let title = req.body
-    Howto.find({title: title})
-
-    .then((found)=>{res.render('search',{found})})
-    
-    // Howto.find({$text})
-    // .then((b)=>{res.render('search',{b})
-    // })
-    // .catch(console.error)
-})
-
 
 module.exports=router;

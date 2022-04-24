@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/vrkljam/Personal_Coding_Help#readme",
   "dependencies": {
+    "bootstrap-icons": "^1.8.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "hbs": "^4.2.0",
