@@ -5,8 +5,18 @@ body{
   height: 100vh;
   
 }
+.main-title{
+  text-align: center;
+  margin-top: 20px;
+}
 .landing-page{
   margin-top: 200px;
+}
+
+.app-descr{
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 20px;
 }
 
 .delete-page{

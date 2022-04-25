@@ -1,5 +1,5 @@
     <div class="container-md">
-      <h1>Edit Page</h1>
+      <h1>Edit Page </h1>
       <form action="/{{this.id}}?_method=PUT" method="POST">
 
           <div class="mb-3 mt-100">
@@ -19,10 +19,11 @@
           </div>
 
           <div class="form-group">
-                <label for="code">Enter code here (optional):</label>
-                <code><textarea name="code" id="code" cols="30" rows="10" value="{{this.codeblock}}"></textarea></code>
+                <label for="code">Enter code here (optional):</label></br>
+                <code >{{this.codeblock}}</code>
+                {{!-- <textarea name="code" id="code" cols="90" rows="10"></textarea> --}}
           </div>
-
+    
           <input type="submit" class="btn btn-primary" value="Update entry"/>
           <a href="/" class="btn btn-secondary">Cancel</a>
       </form>
