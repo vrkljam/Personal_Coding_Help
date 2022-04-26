@@ -13,11 +13,16 @@
                 <input type="text" id="url" name="url" class="form-control" value="{{this.url}}"/>
 
                    <div class="form-group">
-                <label for="code">Enter code here (optional):</label></br>
-                <code><textarea name="code" id="code" cols="90" rows="10" >{{this.codeblock}}</textarea></code>
-              </div>
+                    
+                        <label for="code">Enter code here (optional):</label></br>
+                        <pre>
+                          <code>
+                        <textarea name="code" id="code" cols="90" rows="10">{{this.codeblock}}</textarea>
+                      </code>
+                    </pre>
+                  </div>
             </div>
-  
+      <a href="/edit/{{this.id}}" class="btn btn-primary">Edit</a>
       <a href="/" class="btn btn-secondary">Home Page</a>
     </div>
 
