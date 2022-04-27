@@ -12,7 +12,7 @@ app.use(methodOverride('_method'))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.set('view engine', 'hbs')
-app.use(howtoController)
+app.use('/',howtoController)
 
 const port = process.env.PORT || 5555
 
