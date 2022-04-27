@@ -28,3 +28,6 @@ body{
 label {
   padding-top: 20px;
 }
+pre{
+  margin:0;
+}
