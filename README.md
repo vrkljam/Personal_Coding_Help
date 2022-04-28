@@ -1,7 +1,7 @@
 #Personal Coding Solutions Library App
 
-![screenshots of the app](/Users/mvrkljan/Desktop/sei/projects/personal_coding_how_to/imgs/Screen Shot 2022-04-25 at 1.26.33 PM.png) 
-![screenshots of the app](/Users/mvrkljan/Desktop/sei/projects/personal_coding_how_to/imgs/Screen Shot 2022-04-25 at 1.31.06 PM.png)
+![screenshots of the app](/Users/mvrkljan/Desktop/sei/projects/personal_coding_how_to/imgs2/Screen Shot 2022-04-25 at 1.26.33 PM.png) 
+![screenshots of the app](/Users/mvrkljan/Desktop/sei/projects/personal_coding_how_to/imgs2/Screen Shot 2022-04-25 at 1.31.06 PM.png)
 
 **Link to the game:** [Click Here]()
 
