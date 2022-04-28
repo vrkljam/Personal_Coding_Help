@@ -1,7 +1,7 @@
 # Personal Coding Solutions Library App
 ----------------
 
-![screenshot](/imgs2/Screen Shot 2022-04-25 at 1.26.33 PM.png)
+![screenshot](/imgs2/Screen Shot 2022-04-25 at 1.26.33 PM.jpg)
 
 ![screenshots of the app] 
 ![screenshots of the app](/imgs2/Screen Shot 2022-04-25 at 1.31.06 PM.png)
