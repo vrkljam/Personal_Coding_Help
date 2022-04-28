@@ -1,9 +1,9 @@
 #Personal Coding Solutions Library App
 
-![screenshots of the app](/Users/mvrkljan/Desktop/sei/projects/personal_coding_how_to/imgs2/Screen Shot 2022-04-25 at 1.26.33 PM.png) 
-![screenshots of the app](/Users/mvrkljan/Desktop/sei/projects/personal_coding_how_to/imgs2/Screen Shot 2022-04-25 at 1.31.06 PM.png)
+![screenshots of the app](/imgs2/Screen Shot 2022-04-25 at 1.26.33 PM.png) 
+![screenshots of the app](/imgs2/Screen Shot 2022-04-25 at 1.31.06 PM.png)
 
-**Link to the game:** [Click Here]()
+**Link to the app:** [Click Here]()
 
 ### Code Styles
 - HTML/CSS/JS
@@ -14,7 +14,7 @@
 #### Description of app
 This app is a study/work aid that will keep solutions and troubleshooting answers to coding problems in JS, HTML, Css, etc. It organized by category and has an area for a description/notes. It will have the ability to add new entries, update and delete entries.
 
-##### Instructions
+#### Instructions
 Click on any category to view all entries for that category. Click all to see all enteries.
 
 From the index page a short description can be seen and a clickable link to a website/video that has the solution or lesson.
