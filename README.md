@@ -24,12 +24,8 @@ From the index page a short description can be seen and a clickable link to a we
 Each entry can be viewed, updated or deleted.  A new entry can be done by clicking the "New Entry" button at the top of the page.
 
 ## MVP
-- As a user, I will be able to view all JS entries on the main page.
-- As a user, I will be able to click on one entry and view the hyperlink, and description.
-- As a user, I will be able to update the entry from that single view.
-- As a user, I will be able to click the hyperlink and be redirected to that page from both the main page and the single view page.
-- As a user, I will be able to go back to the main page from the single view page.
-- As a user, I will be able to add a new entry of a description, a hyperlink, and a category from the main page.
+- Ability to view all JS (and other category) entries on the main page.
+- There will be a view with a hyperlink, and description that can be updated.
 - As a user, I want to be able to add my own solutions (no hyperlink needed).
 
 ## Difficulties
