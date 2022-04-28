@@ -14,11 +14,18 @@ app.use(express.urlencoded({extended:true}))
 app.set('view engine', 'hbs')
 app.use('/',howtoController)
 
-// const port = process.env.PORT || 5555
+const port = process.env.PORT || 5555
+
+app.listen((port), ()=>{
+    console.log(`connected on port: ${port}`)
+})
 
 // app.listen((port), ()=>{
 //     console.log(`App on port: ${port}`)})
+// app.listen(process.env.PORT || 3000);
 
-    app.listen(process.env.PORT || 3000);
-
+// app.set('port', process.env.PORT ||8000)
+// app.listen(app.get("port"), ()=>{
+//     console.log(`PORT: ${app.get("port")}`)
+// });
 
