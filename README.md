@@ -1,12 +1,11 @@
 # Personal Coding Solutions Library App
 ----------------
 
-![screenshot](/imgs2/Screen Shot-main page.jpg)
+![screenshot](/imgs2/ScreenShot-main-page.jpg)
+![screenshot](/imgs2/ScreenShot-view-page.jpg)
 
 
-![screenshots of the app](/imgs2/Screen Shot 2022-04-25 at 1.31.06 PM.png)
-
-**Link to the app:** [Click Here]()
+**Link to the app:** [Click Here](https://vrkljam.github.io/Personal_Coding_Help/)
 
 ### Code Styles
 - HTML/CSS/JS
