@@ -5,7 +5,7 @@
 ![screenshot](/imgs2/ScreenShot-view-page.jpg)
 
 
-**Link to the app:** [Click Here](https://vrkljam.github.io/Personal_Coding_Help/)
+**Link to the app:** [Click Here](https://personal-code-helper.herokuapp.com/)
 
 ### Code Styles
 - HTML/CSS/JS
