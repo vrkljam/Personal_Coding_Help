@@ -5,7 +5,7 @@
 ![screenshot](/imgs2/ScreenShot-view-page.jpg)
 
 
-**Link to the app:** [Click Here](https://personal-code-helper.herokuapp.com/)
+**Link to the app:** [Click Here](https://personal-code-helper.onrender.com/)
 
 ### Code Styles
 - HTML/CSS/JS
